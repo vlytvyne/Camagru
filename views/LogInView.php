@@ -32,6 +32,8 @@
 		<button class="btn btn-primary float-right">Log In</button>
 
 	</form>
+
+	<a href="/resetPassword" class="btn btn-outline-primary">Forgot Password</a>
 	<?php include 'parts/CardTail.php' ?>
 
 	</body>
