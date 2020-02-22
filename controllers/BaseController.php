@@ -1,8 +1,13 @@
 <?php
 
+abstract class BaseController {
 
-interface BaseController {
+	protected $action;
 
-	public function renderPage();
+	public function __construct($action = null) {
+		$this->action = $action;
+	}
+
+	public abstract function renderPage();
 
 }

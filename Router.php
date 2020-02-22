@@ -2,22 +2,27 @@
 
 define("ROUTES",
 	[
-		"/signUp" => 'views/SignUpView.php',
-		"/logIn" => 'views/LogInView.php',
-		"/resetPassword" => 'views/PasswordResetView.php',
+		"/signUp" => 'SignUpController',
+		"/logIn" => 'LogInController',
+		"/resetPassword" => 'PasswordResetController',
 		"/profile"
 	]);
 
 class Router {
 
+	private $url;
+
 	public function __construct($url) {
-		if (array_key_exists($url, ROUTES)) {
-			if (file_exists(ROUTES[$url])) {
-				require ROUTES[$url];
-			}
-		} else {
-			require ROUTES["/logIn"];
+		$this->url = $url;
+	}
+
+	public function getAppropriateController() {
+		$controllerName = ROUTES["/logIn"];
+		if (array_key_exists($this->url, ROUTES)) {
+			$controllerName = ROUTES[$this->url];
 		}
+		include 'controllers/'.ROUTES[$this->url].'.php';
+		return new $controllerName();
 	}
 
 }
