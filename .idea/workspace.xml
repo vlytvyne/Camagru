@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="fc5374b1-645d-4d51-8939-8c17e14d1d9e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Router.php" beforeDir="false" afterPath="$PROJECT_DIR$/Router.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/BaseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/BaseController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/LogInView.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/LogInView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/PasswordResetView.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/PasswordResetView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/SignUpView.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/SignUpView.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +36,7 @@
       <list>
         <option value="HTML File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -109,7 +110,7 @@
       <updated>1582213227653</updated>
       <workItem from="1582213233584" duration="2916000" />
       <workItem from="1582273681047" duration="20486000" />
-      <workItem from="1582356805209" duration="3923000" />
+      <workItem from="1582356805209" duration="9750000" />
     </task>
     <servers />
   </component>
@@ -117,6 +118,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="447" y="260" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1582377785441">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="447" y="260" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1582377785441" />
     <state x="501" y="273" key="NewPhpClassDialog" timestamp="1582357910571">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
