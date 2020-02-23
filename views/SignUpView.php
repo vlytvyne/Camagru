@@ -19,7 +19,7 @@
 	<?php include 'parts/CardHead.php' ?>
 		<h2 class="text-center">Sign Up</h2>
 
-		<form name="signUp" method="post" onsubmit="return validateForm()" action="/logIn">
+		<form name="signUp" method="post" onsubmit="return validateForm()" action="/signUp/confirmation">
 			<div class="form-group">
 				<label>Email</label>
 				<input name="email" type="email" class="form-control">

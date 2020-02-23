@@ -2,12 +2,19 @@
 
 abstract class BaseController {
 
-	protected $action;
+	protected $params;
 
-	public function __construct($action = null) {
-		$this->action = $action;
+	public function __construct($params = []) {
+		$this->params = $params;
 	}
 
 	public abstract function renderPage();
 
+	protected function safeParamExtraction($paramNumber) {
+		if (count($this->params) > $paramNumber) {
+			return $this->params[$paramNumber];
+		} else {
+			return false;
+		}
+	}
 }

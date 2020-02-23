@@ -1,5 +1,3 @@
-const emailPattern = /^[a-zA-Z0-9\-_]+(\.[a-zA-Z0-9\-_]+)*@[a-z0-9]+(\-[a-z0-9]+)*(\.[a-z0-9]+(\-[a-z0-9]+)*)*\.[a-z]{2,4}$/;
-
 function isEmpty(str) {
     return str === ""
 }
@@ -13,7 +11,7 @@ function isEmailValid(email) {
         alert("Email is too short. At least 6 characters");
         return false
     }
-    if (emailPattern.test(email)) {
+    if (!email.includes("@")) {
         alert("Email is invalid");
         return false
     }
