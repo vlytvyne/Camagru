@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fc5374b1-645d-4d51-8939-8c17e14d1d9e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/vlytvyne.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/AccountActivationView.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/EmailConfirmationView.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Router.php" beforeDir="false" afterPath="$PROJECT_DIR$/Router.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/BaseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/BaseController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/SignUpController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/SignUpController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/SignUpView.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/SignUpView.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/js/Utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/js/Utils.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,14 +120,14 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="447" y="260" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1582377785441" />
-    <state x="501" y="273" key="NewPhpClassDialog" timestamp="1582357910571">
+    <state x="501" y="273" key="NewPhpClassDialog" timestamp="1582487288254">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="501" y="273" key="NewPhpClassDialog/0.0.1440.900@0.0.1440.900" timestamp="1582357910571" />
-    <state x="538" y="380" key="NewPhpFileDialog" timestamp="1582476053550">
+    <state x="501" y="273" key="NewPhpClassDialog/0.0.1440.900@0.0.1440.900" timestamp="1582487288254" />
+    <state x="538" y="380" key="NewPhpFileDialog" timestamp="1582490565374">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="538" y="380" key="NewPhpFileDialog/0.0.1440.900@0.0.1440.900" timestamp="1582476053550" />
+    <state x="538" y="380" key="NewPhpFileDialog/0.0.1440.900@0.0.1440.900" timestamp="1582490565374" />
     <state x="221" y="89" key="SettingsEditor" timestamp="1582357883319">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -143,9 +136,9 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="500" height="400" key="SwitcherDM/0.0.1440.900@0.0.1440.900" timestamp="1582357310003" />
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1582465124146">
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1582488502853">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1582465124146" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1582488502853" />
   </component>
 </project>

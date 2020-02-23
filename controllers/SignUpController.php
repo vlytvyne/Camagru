@@ -13,7 +13,11 @@ class SignUpController extends BaseController {
 		} else if ($this->isActivation()) {
 			include 'views/AccountActivationView.php';
 		} else {
-			include 'views/SignUpView.php';
+			include_once 'DB.php';
+			$db = new DB();
+			$result = $db->query("SELECT * FROM users WHERE email = ?", array('test@test'));
+			var_dump($result);
+//			include 'views/SignUpView.php';
 		}
 	}
 
