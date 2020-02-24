@@ -17,7 +17,7 @@
 	<?php include 'parts/CardHead.php' ?>
 	<h2 class="text-center">Account activation</h2>
 
-	<p>Your account is activated. You can now log in.</p>
+	<p><?= $activationResult ?></p>
 
 	<a href="/logIn" class="btn btn-primary float-right">Log In</a>
 	<?php include 'parts/CardTail.php' ?>

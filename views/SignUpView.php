@@ -22,20 +22,20 @@
 		<form name="signUp" method="post" onsubmit="return validateForm()" action="/signUp/confirmation">
 			<div class="form-group">
 				<label>Email</label>
-				<input name="email" type="email" class="form-control">
+				<input name="email" minlength="6" type="email" class="form-control" onblur="checkIfEmailTaken()">
 			</div>
 
 			<div class="form-group">
 				<label>Username</label>
-				<input name="username" type="text" class="form-control">
+				<input name="username" minlength="6" type="text" class="form-control" onblur="checkIfUsernameTaken()">
 			</div>
 
 			<div class="form-group">
 				<label>Password</label>
-				<input name="password" type="password" class="form-control">
+				<input name="password" minlength="6" type="password" class="form-control">
 			</div>
 
-			<button type="submit" class="btn btn-primary float-right">Sign Up</button>
+			<button class="btn btn-primary float-right">Sign Up</button>
 
 		</form>
 	<?php include 'parts/CardTail.php' ?>

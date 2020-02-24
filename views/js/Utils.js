@@ -15,10 +15,12 @@ function isEmailValid(email) {
         alert("Email is invalid");
         return false
     }
-    return true
+
+    return true;
 }
 
 function isUsernameValid(username) {
+
     if (isEmpty(username)) {
         alert("Username can\'t be empty");
         return false
@@ -27,6 +29,7 @@ function isUsernameValid(username) {
         alert("Username is too short. At least 6 characters");
         return false
     }
+
     return true
 }
 
@@ -40,4 +43,12 @@ function isPasswordValid(password) {
         return false
     }
     return true
+}
+
+function ajax(url, onLoaded) {
+    let request = new XMLHttpRequest();
+    request.open('get', url)
+    request.responseType = 'json'
+    request.onloadend = function() { onLoaded(request) }
+    request.send()
 }
