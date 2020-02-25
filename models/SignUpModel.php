@@ -58,12 +58,12 @@ class SignUpModel extends BaseModel {
 		return hash('sha256', $email.SECRET);
 	}
 
-	public function emailTaken($email) {
+	public function isEmailTaken($email) {
 		$users = $this->db->query("SELECT * FROM users WHERE email = ?", array($email));
 		return count($users) > 0;
 	}
 
-	public function usernameTaken($username) {
+	public function isUsernameTaken($username) {
 		$users = $this->db->query("SELECT * FROM users WHERE username = ?", array($username));
 		return count($users) > 0;
 	}
