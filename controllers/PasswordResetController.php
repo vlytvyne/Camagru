@@ -4,7 +4,7 @@ include_once 'BaseController.php';
 
 class PasswordResetController extends BaseController {
 
-	public function renderPage() {
+	public function indexAction() {
 		include 'views/PasswordResetView.php';
 	}
 }

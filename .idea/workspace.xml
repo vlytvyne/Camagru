@@ -3,11 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="fc5374b1-645d-4d51-8939-8c17e14d1d9e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Router.php" beforeDir="false" afterPath="$PROJECT_DIR$/Router.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/BaseController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/BaseController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/SignUpController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/SignUpController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/SignUpModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/SignUpModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/SignUpView.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/SignUpView.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/js/SignUpValidation.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/js/SignUpValidation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/js/Utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/js/Utils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,9 +139,9 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="500" height="400" key="SwitcherDM/0.0.1440.900@0.0.1440.900" timestamp="1582357310003" />
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1582540125287">
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1582648090889">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1582540125287" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1582648090889" />
   </component>
 </project>

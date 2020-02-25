@@ -5,7 +5,6 @@ define("ROUTES",
 		"signUp" => 'SignUpController',
 		"logIn" => 'LogInController',
 		"resetPassword" => 'PasswordResetController',
-		"profile"
 	]);
 
 class Router {
@@ -16,22 +15,28 @@ class Router {
 		$this->url = parse_url($url)["path"];
 	}
 
-	public function getAppropriateController() {
+	public function handleRequest() {
 		$parts = explode('/', $this->url);
-		$route = "";
-		$params = [];
-		if (array_key_exists('1', $parts)) {
-			$route = $parts[1];
+		$controllerKey = $parts[1];
+		$action = 'indexAction';
+		if (array_key_exists(2, $parts) && !empty($parts[2])) {
+			$action = $parts[2].'Action';
 		}
-		if (array_key_exists('2', $parts)) {
-		    $params = array_slice($parts, 2);
+		if (array_key_exists($controllerKey, ROUTES)) {
+			$controllerName = ROUTES[$controllerKey];
+			$controllerFile = 'controllers/'.$controllerName.'.php';
+			if (file_exists($controllerFile)) {
+				include $controllerFile;
+				$controller = new $controllerName();
+				if (method_exists($controller, $action)) {
+					$controller->$action();
+				} else {
+					http_response_code(404);
+				}
+			}
+		} else {
+			http_response_code(404);
 		}
-		$controllerName = ROUTES["logIn"];
-		if (array_key_exists($route, ROUTES)) {
-			$controllerName = ROUTES[$route];
-		}
-		include 'controllers/'.$controllerName.'.php';
-		return new $controllerName($params);
 	}
 
 }
