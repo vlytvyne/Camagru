@@ -8,7 +8,7 @@
 		<link rel="stylesheet" type="text/css" href="/views/css/bootstrap.min.css"/>
 		<link rel="stylesheet" type="text/css" href="/views/css/authorization.css"/>
 		<script type="text/javascript" src="/views/js/Utils.js"></script>
-		<script type="text/javascript" src="/views/js/LogInValidation.js"></script>
+		<script type="text/javascript" src="/views/js/LogIn.js"></script>
 		<title>Log In</title>
 	</head>
 
@@ -19,19 +19,19 @@
 	<?php include 'parts/CardHead.php' ?>
 	<h2 class="text-center">Log In</h2>
 
-	<form name="logIn" method="post" onsubmit="return validateForm()" action="/signUp">
+	<form name="logIn">
 
 		<div class="form-group">
 			<label>Username</label>
-			<input name="username" type="text" class="form-control">
+			<input name="username" type="text" class="form-control" minlength="6">
 		</div>
 
 		<div class="form-group">
 			<label>Password</label>
-			<input name="password" type="password" class="form-control">
+			<input name="password" type="password" class="form-control" minlength="6">
 		</div>
 
-		<button type="submit" class="btn btn-primary float-right">Log In</button>
+		<button type="button" class="btn btn-primary float-right" id="btn">Log In</button>
 
 	</form>
 

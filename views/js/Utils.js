@@ -45,10 +45,11 @@ function isPasswordValid(password) {
     return true
 }
 
-function ajax(url, onLoaded) {
+function ajax(relativeUrl, params, onLoaded) {
     let request = new XMLHttpRequest();
-    request.open('get', url)
+    request.open('POST', 'http://' + window.location.hostname + relativeUrl)
+    request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
     request.responseType = 'json'
-    request.onloadend = function() { onLoaded(request) }
-    request.send()
+    request.onloadend = function() { onLoaded(request.response) }
+    request.send(params)
 }

@@ -31,15 +31,15 @@ class SignUpController extends BaseController {
 	}
 
 	public function emailCheckAction() {
-		protectFromBadRequest($_GET, 'email');
-		$exists = $this->model->isEmailTaken($_GET['email']);
-		echo json_encode(array("isTaken" => $exists));
+		protectFromBadRequest($_POST, 'email');
+		$isTaken = $this->model->isEmailTaken($_POST['email']);
+		echo json_encode(array("isTaken" => $isTaken));
 	}
 
 	public function usernameCheckAction() {
-		protectFromBadRequest($_GET, 'username');
-		$exists = $this->model->isUsernameTaken($_GET['username']);
-		echo json_encode(array("isTaken" => $exists));
+		protectFromBadRequest($_POST, 'username');
+		$isTaken = $this->model->isUsernameTaken($_POST['username']);
+		echo json_encode(array("isTaken" => $isTaken));
 	}
 
 	private function getActivationResult($resultCode) {

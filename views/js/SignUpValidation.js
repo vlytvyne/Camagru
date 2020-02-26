@@ -25,20 +25,20 @@ function validateForm() {
 
 function checkIfEmailTaken() {
     let email = document.forms[FORM_NAME]["email"].value;
-    ajax("http://localhost/signUp/emailCheck?email=" + email, function (request) {
-        if (request.response.isTaken) {
+    ajax("/signUp/emailCheck", `email=${email}`, function (response) {
+        if (response.isTaken) {
             alert("This email is already registered.")
         }
-        emailTaken = request.response.isTaken
+        emailTaken = response.isTaken
     })
 }
 
 function checkIfUsernameTaken() {
     let username = document.forms[FORM_NAME]["username"].value;
-    ajax("http://localhost/signUp/usernameCheck?username=" + username, function (request) {
-        if (request.response.isTaken) {
+    ajax("/signUp/usernameCheck", `username=${username}`, function (response) {
+        if (response.isTaken) {
             alert("This username is already taken.")
         }
-        usernameTaken = request.response.isTaken
+        usernameTaken = response.isTaken
     })
 }
