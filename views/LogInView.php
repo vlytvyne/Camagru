@@ -31,7 +31,7 @@
 			<input name="password" type="password" class="form-control" minlength="6">
 		</div>
 
-		<button type="button" class="btn btn-primary float-right" id="btn">Log In</button>
+		<button type="button" class="btn btn-primary float-right" onclick="onLogInClick()">Log In</button>
 
 	</form>
 

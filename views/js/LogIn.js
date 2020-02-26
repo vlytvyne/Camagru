@@ -1,12 +1,6 @@
 const FORM_NAME = "logIn";
 
-document.addEventListener('DOMContentLoaded', function(){
-    document.getElementById('btn').addEventListener("click", function () {
-        onClick()
-    })
-}, false);
-
-function onClick() {
+function onLogInClick() {
     const username = document.forms[FORM_NAME]["username"].value;
     const password = document.forms[FORM_NAME]["password"].value;
 

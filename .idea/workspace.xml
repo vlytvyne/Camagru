@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fc5374b1-645d-4d51-8939-8c17e14d1d9e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/models/LogInModel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/LogInController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/LogInController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/SignUpController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/SignUpController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/LogInView.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/LogInView.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/js/LogInValidation.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/js/LogIn.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/js/SignUpValidation.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/js/SignUpValidation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/js/Utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/js/Utils.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/js/LogIn.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/js/LogIn.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
