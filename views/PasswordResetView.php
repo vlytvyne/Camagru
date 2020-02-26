@@ -14,7 +14,7 @@
 
 	<body>
 
-	<?php include 'parts/NotLoggedInNavbar.php' ?>
+	<?php include 'parts/NavBar.php' ?>
 
 	<?php include 'parts/CardHead.php' ?>
 	<h2 class="text-center">Password Reset</h2>

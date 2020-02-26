@@ -16,6 +16,7 @@ class LogInController extends BaseController {
 		include 'views/LogInView.php';
 	}
 
+	//ajax
 	public function logUserInAction() {
 		protectFromBadRequest($_POST, 'username', 'password');
 		$user = $this->model->getUser($_POST['username'], $_POST['password']);
@@ -23,5 +24,12 @@ class LogInController extends BaseController {
 			$_SESSION['user'] = $user;
 		}
 		echo json_encode(array("isSuccess" => $user !== false));
+	}
+
+	public function logUserOutAction() {
+		protectFromBadRequest($_SESSION, 'user');
+		$_SESSION = [];
+		session_destroy();
+		redirect('/logIn');
 	}
 }

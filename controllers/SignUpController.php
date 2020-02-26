@@ -30,12 +30,14 @@ class SignUpController extends BaseController {
 		include 'views/AccountActivationView.php';
 	}
 
+	//ajax
 	public function emailCheckAction() {
 		protectFromBadRequest($_POST, 'email');
 		$isTaken = $this->model->isEmailTaken($_POST['email']);
 		echo json_encode(array("isTaken" => $isTaken));
 	}
 
+	//ajax
 	public function usernameCheckAction() {
 		protectFromBadRequest($_POST, 'username');
 		$isTaken = $this->model->isUsernameTaken($_POST['username']);
