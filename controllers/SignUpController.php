@@ -17,27 +17,27 @@ class SignUpController extends BaseController {
 	}
 
 	public function confirmationAction() {
-		protectFromBadRequest(POST, 'email', 'username', 'password');
+		protectFromBadRequest($_POST, 'email', 'username', 'password');
 		$this->model->createNewUser($_POST['username'], $_POST['email'], $_POST['password']);
 		$this->model->sendConfirmationEmail($_POST['email']);
 		include 'views/EmailConfirmationView.php';
 	}
 
 	public function activationAction() {
-		protectFromBadRequest(GET, 'email', 'secret');
+		protectFromBadRequest($_GET, 'email', 'secret');
 		$resultCode = $this->model->activateAccount($_GET['email'], $_GET['secret']);
 		$activationResult = $this->getActivationResult($resultCode);
 		include 'views/AccountActivationView.php';
 	}
 
 	public function emailCheckAction() {
-		protectFromBadRequest(GET, 'email');
+		protectFromBadRequest($_GET, 'email');
 		$exists = $this->model->isEmailTaken($_GET['email']);
 		echo json_encode(array("isTaken" => $exists));
 	}
 
 	public function usernameCheckAction() {
-		protectFromBadRequest(GET, 'username');
+		protectFromBadRequest($_GET, 'username');
 		$exists = $this->model->isUsernameTaken($_GET['username']);
 		echo json_encode(array("isTaken" => $exists));
 	}

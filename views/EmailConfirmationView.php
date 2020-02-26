@@ -17,7 +17,7 @@
 	<?php include 'parts/CardHead.php' ?>
 	<h2 class="text-center">Email confirmation</h2>
 
-	<p>We send you an email to confirm your mail address. Please, follow instructions in email and then log in. If you can't find our mail, make sure to check spam section.</p>
+	<p>We've sent you an email to confirm your mail address. Please, follow instructions in email and then log in. If you can't find our mail, make sure to check spam section.</p>
 
 	<a href="/logIn" class="btn btn-primary float-right">Log In</a>
 	<?php include 'parts/CardTail.php' ?>

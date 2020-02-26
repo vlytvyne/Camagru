@@ -8,10 +8,6 @@ const RC_INVALID_LINK = 0;
 const RC_ALREADY_ACTIVATED = 1;
 const RC_SUCCESS = 2;
 
-const RC_USER_CREDENTIALS_UNIQUE = 0;
-const RC_EMAIL_TAKEN = 1;
-const RC_USERNAME_TAKEN = 2;
-
 class SignUpModel extends BaseModel {
 
 	public function createNewUser($username, $email, $password) {
