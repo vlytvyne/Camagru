@@ -2,6 +2,7 @@ let video;
 let canvas;
 let webcamBtn;
 let fileInput;
+let cat;
 
 let canvasContext;
 let canvasDrawingProcessId;
@@ -19,7 +20,15 @@ document.addEventListener('DOMContentLoaded', () => {
     fileInput.onchange = handleFileInput;
     fileInput.onerror = () => { console.error("File input error")};
     
-    startWebcamTranslation()
+    startWebcamTranslation();
+
+    let images = document.getElementsByTagName('img')
+    for (const image of images) {
+        console.log(image);
+        image.addEventListener('click', () => {
+            image.style.filter = 'drop-shadow(2px 4px 6px yellow)'
+        })
+    }
 }, false);
 
 function startWebcamTranslation() {

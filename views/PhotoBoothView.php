@@ -24,13 +24,19 @@
 			min-width: 300px;
 			height: 20vh;
 			margin: 3vh auto auto;
+			overflow-x: scroll;
 		}
 		#canvas {
 			height: 100%;
 			width: 100%;
 		}
-		#video {
-
+		img {
+			width: auto;
+			height: 16vh;
+			margin-top: auto;
+			margin-bottom: auto;
+			display: block;
+			filter: drop-shadow(2px 4px 6px black);
 		}
 	</style>
 </head>
@@ -52,7 +58,16 @@
 		<button class="btn btn-primary" id="webcam_btn">Use webcam</button>
 	</div>
 
-	<div class="card" id="stickers_box">
+	<div class="card flex-row" id="stickers_box">
+
+		<img src="/resources/crying_cat.png" id="crying_cat">
+		<img src="/resources/watermelon_dog.png" >
+		<img src="/resources/fuck_cat.png" >
+		<img src="/resources/gusse.png" >
+		<img src="/resources/knuckles.png" >
+		<img src="/resources/harold.png" >
+		<img src="/resources/monster.png" >
+
 	</div>
 
 	<script src="/views/js/PhotoBooth.js"></script>

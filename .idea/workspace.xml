@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fc5374b1-645d-4d51-8939-8c17e14d1d9e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/crying_cat.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/PhotoBoothView.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/PhotoBoothView.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/js/PhotoBooth.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/js/PhotoBooth.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -69,7 +71,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.PHP" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -182,10 +184,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="538" y="380" key="NewPhpFileDialog/0.0.1440.900@0.0.1440.900" timestamp="1582808068034" />
-    <state x="221" y="89" key="SettingsEditor" timestamp="1582758783665">
+    <state x="221" y="89" key="SettingsEditor" timestamp="1582832927927">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="221" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1582758783665" />
+    <state x="221" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1582832927927" />
     <state width="500" height="400" key="SwitcherDM" timestamp="1582357310003">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
