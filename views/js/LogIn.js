@@ -4,7 +4,7 @@ function onLogInClick() {
     const username = document.forms[FORM_NAME]["username"].value;
     const password = document.forms[FORM_NAME]["password"].value;
 
-    const formIsValid = isUsernameValid(username) && isPasswordValid(password)
+    const formIsValid = isUsernameValid(username) && isPasswordValid(password);
 
     if (!formIsValid) {
         return;

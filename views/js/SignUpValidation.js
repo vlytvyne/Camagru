@@ -9,12 +9,12 @@ function validateForm() {
     const password = document.forms[FORM_NAME]["password"].value;
 
     if (emailTaken) {
-        alert("This email is already registered.")
+        alert("This email is already registered.");
         return false
     }
 
     if (usernameTaken) {
-        alert("This username is already taken.")
+        alert("This username is already taken.");
         return false
     }
 

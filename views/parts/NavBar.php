@@ -3,7 +3,7 @@
 	<ul class="nav navbar-nav flex-row">
 
 <?php if (isset($_SESSION['user'])) : ?>
-		<li class="nav-item" style="margin-right: 16px">
+		<li class="nav-item">
 			<a href="/logIn/logUserOut" class="btn btn-outline-light">Log Out</a>
 		</li>
 <?php else: ?>
