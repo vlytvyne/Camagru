@@ -13,7 +13,6 @@
 	<style>
 		h1 {
 			font-size: 100px;
-			margin-bottom: 0px;
 			color: white;
 		}
 	</style>
@@ -27,6 +26,18 @@
 		<h1>Gallery</h1>
 	</div>
 
+	<div class="d-flex justify-content-center" style="width: 100%;">
+		<div class="d-flex flex-column align-content-stretch">
+			<form class="form-inline" method="get" action="/gallery">
+				<input class="form-control mr-sm-2" type="text" placeholder="Search user" aria-label="Search" minlength="6" name="username">
+				<button class="btn btn-primary" type="submit">Search</button>
+			</form>
+			<?php if (isset($_SESSION['user'])) : ?>
+				<a class="btn btn-outline-primary" style="margin-top: 16px; color: white" href="<?= "/gallery?username=".$_SESSION['user']['username']?>">Go to my gallery</a>
+			<?php endif; ?>
+		</div>
+	</div>
+
 	<div class="container">
 		<div class="row justify-content-around" id="photos_container">
 <!--			<div class="col-lg-3 col-md-5 card my_col ">-->
@@ -36,7 +47,7 @@
 		</div>
 	</div>
 
-	<div style="width: 100%; text-align: center">
+	<div class="text-center">
 		<button class="btn btn-success" style="margin-bottom: 3vh;" id="btn_load_more">Load more</button>
 	</div>
 

@@ -13,13 +13,15 @@ class GalleryController extends BaseController {
 	}
 
 	public function indexAction() {
+		$_SESSION['galleryUsername'] = isset($_GET['username']) ? $_GET['username'] : null;
 		include 'views/GalleryView.php';
 	}
 
 	//ajax
 	public function fetchPhotosAction() {
 		protectFromBadRequest($_POST, 'page', 'iop');
-		$result = $this->model->fetchPhotos($_POST['page'], $_POST['iop']);
+		$result = $this->model->fetchPhotos($_POST['page'], $_POST['iop'], $_SESSION['galleryUsername']);
 		echo json_encode(array("photos" => $result));
 	}
+
 }

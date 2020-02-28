@@ -1,5 +1,5 @@
 <nav class="navbar">
-	<a href="#" class="navbar-brand">Camagru</a>
+	<a href="/gallery" class="navbar-brand">Camagru</a>
 	<ul class="nav navbar-nav flex-row">
 
 <?php if (isset($_SESSION['user'])) : ?>

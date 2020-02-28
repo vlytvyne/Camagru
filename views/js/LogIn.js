@@ -12,7 +12,7 @@ function onLogInClick() {
 
     ajax("/logIn/logUserIn", `username=${username}&password=${password}`, function (response) {
         if (response.isSuccess) {
-            window.location.replace(getHostname() + '/signUp')
+            window.location.replace(getHostname() + '/gallery')
         } else {
             alert("Can\'t log in. Username or password is wrong or account is not activated.")
         }
