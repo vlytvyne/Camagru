@@ -22,8 +22,28 @@ img {
     padding: 20px 20px 80px;
 }
 
+.fab {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    border-radius: 150px;
+    padding: 8px
+}
+
+.fab_icon {
+    width: 60px;
+    height: 60px
+}
+
 @media (min-width: 2000px) {
     .container {
         max-width: 100%;
     }
+}
+
+@media (min-width: 1200px) {
+   .fab {
+       bottom: 20px;
+       right: 20px;
+   }
 }
