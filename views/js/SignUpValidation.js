@@ -42,3 +42,4 @@ function checkIfUsernameTaken() {
         usernameTaken = response.isTaken
     })
 }
+

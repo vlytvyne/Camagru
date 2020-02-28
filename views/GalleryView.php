@@ -51,7 +51,9 @@
 		<button class="btn btn-success" style="margin-bottom: 3vh;" id="btn_load_more">Load more</button>
 	</div>
 
-	<a href="/photoBooth" class="btn btn-primary fab"><img src="/resources/ic_camera.png" class="fab_icon"></a>
+	<?php if (isset($_SESSION['user'])) : ?>
+		<a href="/photoBooth" class="btn btn-primary fab"><img src="/resources/ic_camera.png" class="fab_icon"></a>
+	<?php endif; ?>
 
 </body>
 </html>

@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fc5374b1-645d-4d51-8939-8c17e14d1d9e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Router.php" beforeDir="false" afterPath="$PROJECT_DIR$/Router.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/GalleryModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/GalleryModel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/GalleryView.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/GalleryView.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/css/gallery.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/css/gallery.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/js/SignUpValidation.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/js/SignUpValidation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/parts/NavBar.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/parts/NavBar.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,14 +183,14 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1398" height="303" key="GridCell.Tab.2.right/0.0.1440.900@0.0.1440.900" timestamp="1582761870331" />
-    <state x="501" y="272" key="NewPhpClassDialog" timestamp="1582897859256">
+    <state x="501" y="272" key="NewPhpClassDialog" timestamp="1582915415495">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="501" y="272" key="NewPhpClassDialog/0.0.1440.900@0.0.1440.900" timestamp="1582897859256" />
-    <state x="538" y="380" key="NewPhpFileDialog" timestamp="1582808068034">
+    <state x="501" y="272" key="NewPhpClassDialog/0.0.1440.900@0.0.1440.900" timestamp="1582915415495" />
+    <state x="538" y="380" key="NewPhpFileDialog" timestamp="1582915826720">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="538" y="380" key="NewPhpFileDialog/0.0.1440.900@0.0.1440.900" timestamp="1582808068034" />
+    <state x="538" y="380" key="NewPhpFileDialog/0.0.1440.900@0.0.1440.900" timestamp="1582915826720" />
     <state x="221" y="89" key="SettingsEditor" timestamp="1582911406078">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -199,9 +203,9 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="385" y="210" key="run.anything.popup/0.0.1440.900@0.0.1440.900" timestamp="1582722389796" />
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1582907131903">
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1582921861445">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1582907131903" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1582921861445" />
   </component>
 </project>
