@@ -67,7 +67,11 @@ function onWebcamBtnClick() {
 function onPublishClick() {
     const photo = canvas.toDataURL();
     ajax('/photoBooth/publishPhoto', `photoBase64=${photo}`, (response) => {
-        alert(response.isSuccess)
+        if (response.isSuccess) {
+            window.location.replace(getHostname() + '/gallery')
+        } else {
+            alert("Unknown error occured, can\'t publish a photo.")
+        }
     })
 }
 

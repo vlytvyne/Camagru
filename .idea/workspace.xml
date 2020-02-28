@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fc5374b1-645d-4d51-8939-8c17e14d1d9e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/pornhub.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/PhotoBoothController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/PhotoBoothController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/background_2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/PhotoBoothView.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/PhotoBoothView.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/css/photo_booth.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/css/photo_booth.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/PhotoBoothModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/PhotoBoothModel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/js/PhotoBooth.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/js/PhotoBooth.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -123,6 +120,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="320" y="115" key="#SQL_Dialects" timestamp="1582893339387">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="320" y="115" key="#SQL_Dialects/0.0.1440.900@0.0.1440.900" timestamp="1582893339387" />
     <state x="447" y="260" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1582377785441">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -179,10 +180,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="1398" height="303" key="GridCell.Tab.2.right/0.0.1440.900@0.0.1440.900" timestamp="1582761870331" />
-    <state x="501" y="272" key="NewPhpClassDialog" timestamp="1582817625310">
+    <state x="501" y="272" key="NewPhpClassDialog" timestamp="1582892278688">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="501" y="272" key="NewPhpClassDialog/0.0.1440.900@0.0.1440.900" timestamp="1582817625310" />
+    <state x="501" y="272" key="NewPhpClassDialog/0.0.1440.900@0.0.1440.900" timestamp="1582892278688" />
     <state x="538" y="380" key="NewPhpFileDialog" timestamp="1582808068034">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -199,9 +200,9 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="385" y="210" key="run.anything.popup/0.0.1440.900@0.0.1440.900" timestamp="1582722389796" />
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1582889144883">
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1582896936495">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1582889144883" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1582896936495" />
   </component>
 </project>

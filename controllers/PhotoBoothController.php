@@ -8,6 +8,12 @@ const SAVE_DIR =  'photos/';
 
 class PhotoBoothController extends BaseController {
 
+	private $model;
+
+	public function __construct() {
+		$this->model = new PhotoBoothModel();
+	}
+
 	public function indexAction() {
 		include 'views/PhotoBoothView.php';
 	}
@@ -15,12 +21,11 @@ class PhotoBoothController extends BaseController {
 	//ajax
 	public function publishPhotoAction() {
 		protectFromBadRequest($_POST, 'photoBase64');
-		$img = $_POST['photoBase64'];
-		$img = str_replace('data:image/png;base64,', '', $img);
-		$img = str_replace(' ', '+', $img);
-		$imgData = base64_decode($img);
-		$file = SAVE_DIR . uniqid() . '.png';
-		$success = file_put_contents($file, $imgData);
-		echo json_encode(array('isSuccess' => $success));
+		$result = $this->model->savePhoto($_POST['photoBase64']);
+		if ($result !== false) {
+			$this->model->addPhotoToDb($result, $_SESSION['user']['username']);
+		}
+		echo json_encode(array('isSuccess' => $result));
 	}
+
 }
