@@ -13,7 +13,7 @@ class PhotoBoothController extends BaseController {
 	}
 
 	//ajax
-	public function savePhotoAction() {
+	public function publishPhotoAction() {
 		protectFromBadRequest($_POST, 'photoBase64');
 		$img = $_POST['photoBase64'];
 		$img = str_replace('data:image/png;base64,', '', $img);

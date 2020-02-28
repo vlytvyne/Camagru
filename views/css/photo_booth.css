@@ -1,2 +1,44 @@
 @import "navbar.css";
 @import "background.css";
+
+#webcam_container {
+    padding: 2px;
+    max-width: 50vw;
+    min-width: 300px;
+    height: 50vh;
+    margin: 1vh auto auto;
+    background-color: #08AEEA;
+    background-image: linear-gradient(90deg, #08AEEA 0%, #2AF598 100%);;
+}
+#stickers_box {
+    width: 50vw;
+    min-width: 300px;
+    height: 20vh;
+    margin: 1vh auto auto;
+    overflow-x: scroll;
+}
+#canvas {
+    height: 100%;
+    width: 100%;
+}
+.sticker {
+    width: auto;
+    height: 16vh;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: block;
+    filter: drop-shadow(2px 4px 6px black);
+}
+#publish_btn {
+    width: 100%;
+}
+#photo_btns_container {
+    width: 100vw;
+    margin-top: 1vh;
+    height: 40px
+}
+#publish_btn_container {
+    width: 50vw;
+    min-width: 300px;
+    margin: 1vh auto auto;
+}
