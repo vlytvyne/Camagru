@@ -57,3 +57,19 @@ function ajax(relativeUrl, params, onLoaded) {
 function getHostname() {
     return 'http://' + window.location.hostname;
 }
+
+function disableBtn(btn) {
+    if (!btn.classList.contains('disabled')) {
+        btn.classList.add('disabled');
+        btn.classList.remove('enabled');
+        btn.disabled = true;
+    }
+}
+
+function enableBtn(btn) {
+    if (!btn.classList.contains('enabled')) {
+        btn.classList.add('enabled');
+        btn.classList.remove('disabled');
+        btn.disabled = false;
+    }
+}

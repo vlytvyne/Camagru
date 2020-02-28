@@ -20,6 +20,6 @@ class PhotoBoothModel extends BaseModel {
 	}
 
 	function addPhotoToDb($filename, $username) {
-		$this->db->query("INSERT INTO photos (id, filename, username, creation_timestamp, user_likes, comments) VALUES (NULL, ?, ?, CURRENT_TIMESTAMP, '', '')", array($filename, $username));
+		$this->db->query("INSERT INTO photos (filename, username, creation_timestamp, user_likes, comments) VALUES (?, ?, CURRENT_TIMESTAMP, '', '')", array($filename, $username));
 	}
 }

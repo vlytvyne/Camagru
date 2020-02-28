@@ -8,7 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="/views/css/bootstrap.min.css"/>
 	<link rel="stylesheet" type="text/css" href="/views/css/photo_booth.css"/>
 	<script type="text/javascript" src="/views/js/Utils.js"></script>
-	<script src="/views/js/PhotoBooth.js"></script>
+	<script type="text/javascript" src="/views/js/PhotoBooth.js"></script>
 	<title>Photo Booth</title>
 </head>
 

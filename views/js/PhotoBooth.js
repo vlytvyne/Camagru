@@ -55,7 +55,7 @@ function translateWebcamToCanvas() {
 }
 
 function onWebcamBtnClick() {
-    disablePublishBtn();
+    disableBtn(publishBtn);
     if (webcamModeIsOn) {
         stopWebcamTranslation();
         setWebcamMode(false);
@@ -79,7 +79,7 @@ function handleFileInput() {
     setWebcamMode(false);
     stopWebcamTranslation();
     clearCanvas();
-    disablePublishBtn();
+    disableBtn(publishBtn);
     let img = new Image();
     img.onload = drawFileInputOnCanvas;
     img.onerror = () => { console.error("File input error")};
@@ -139,27 +139,11 @@ function clearCanvas() {
 
 function drawPickedSticker(x, y) {
     if (pickedSticker != null && !webcamModeIsOn) {
-        enablePublishBtn();
+        enableBtn(publishBtn);
         const stickerWidth = canvas.width / 4;
         const stickerHeight = canvas.height / 4;
         let cursorCenteredX = x - (stickerWidth / 2);
         let cursorCenteredY = y - (stickerHeight / 2);
         canvasContext.drawImage(pickedSticker, cursorCenteredX, cursorCenteredY, stickerWidth, stickerHeight);
-    }
-}
-
-function disablePublishBtn() {
-    if (!publishBtn.classList.contains('disabled')) {
-        publishBtn.classList.add('disabled');
-        publishBtn.classList.remove('enabled');
-        publishBtn.disabled = true;
-    }
-}
-
-function enablePublishBtn() {
-    if (!publishBtn.classList.contains('enabled')) {
-        publishBtn.classList.add('enabled');
-        publishBtn.classList.remove('disabled');
-        publishBtn.disabled = false;
     }
 }
