@@ -16,29 +16,43 @@ class ProfileController extends BaseController {
 		include 'views/ProfileView.php';
 	}
 
-	//ajax
 	public function changeEmailAction() {
-		protectFromBadRequest($_POST, 'email');
-		$this->model->changeEmail($_SESSION['user']['email'], $_POST['email']);
+		include 'views/ProfileChangeEmailView.php';
 	}
 
-	//ajax
 	public function changeUsernameAction() {
-		protectFromBadRequest($_POST, 'username');
-		$this->model->changeUsername($_SESSION['user']['username'], $_POST['username']);
+		include 'views/ProfileChangeUsernameView.php';
 	}
 
-	//ajax
 	public function changePasswordAction() {
-		protectFromBadRequest($_POST, 'password');
-		$this->model->changePassword($_SESSION['user']['username'], $_POST['password']);
+		include 'views/ProfileChangePasswordView.php';
 	}
 
 	//ajax
-	public function changeReceiveEmailsAction() {
+	public function setEmailAction() {
+		protectFromBadRequest($_POST,'email');
+		$_SESSION['user']['email'] = $_POST['email'];
+		$this->model->changeEmail($_SESSION['user']['id'], $_POST['email']);
+	}
+
+	//ajax
+	public function setUsernameAction() {
+		protectFromBadRequest($_POST, 'username');
+		$_SESSION['user']['username'] = $_POST['username'];
+		$this->model->changeUsername($_SESSION['user']['id'], $_POST['username']);
+	}
+
+	//ajax
+	public function setPasswordAction() {
+		protectFromBadRequest($_POST, 'password');
+		$this->model->changePassword($_SESSION['user']['id'], $_POST['password']);
+	}
+
+	//ajax
+	public function setReceiveEmailsAction() {
 		protectFromBadRequest($_POST, 'wantReceive');
 		$wantReceiveBool = $_POST['wantReceive'] == 'true' ? true : false;
 		$_SESSION['user']['receive_emails'] = $wantReceiveBool;
-		$this->model->changeReceiveEmails($_SESSION['user']['username'], $wantReceiveBool);
+		$this->model->changeReceiveEmails($_SESSION['user']['id'], $wantReceiveBool);
 	}
 }
