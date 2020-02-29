@@ -9,7 +9,7 @@ class GalleryModel extends BaseModel {
 		if ($username == null) {
 			return $this->db->query("SELECT * FROM photos ORDER BY creation_timestamp DESC LIMIT ?, ?", array($offset, $iop));
 		} else {
-			return $this->db->query("SELECT * FROM photos WHERE username = ? ORDER BY creation_timestamp DESC LIMIT ?, ?", array($username, $offset, $iop));
+			return $this->db->query("SELECT * FROM photos INNER JOIN users ON photos.user_id = users.id WHERE users.username = ? ORDER BY photos.creation_timestamp DESC LIMIT ?, ?", array($username, $offset, $iop));
 		}
 	}
 

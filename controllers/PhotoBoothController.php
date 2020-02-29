@@ -23,7 +23,7 @@ class PhotoBoothController extends BaseController {
 		protectFromBadRequest($_POST, 'photoBase64');
 		$result = $this->model->savePhoto($_POST['photoBase64']);
 		if ($result !== false) {
-			$this->model->addPhotoToDb($result, $_SESSION['user']['username']);
+			$this->model->addPhotoToDb($result, $_SESSION['user']['id']);
 		}
 		echo json_encode(array('isSuccess' => $result));
 	}

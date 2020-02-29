@@ -38,6 +38,7 @@ class ProfileController extends BaseController {
 	public function changeReceiveEmailsAction() {
 		protectFromBadRequest($_POST, 'wantReceive');
 		$wantReceiveBool = $_POST['wantReceive'] == 'true' ? true : false;
+		$_SESSION['user']['receive_emails'] = $wantReceiveBool;
 		$this->model->changeReceiveEmails($_SESSION['user']['username'], $wantReceiveBool);
 	}
 }
