@@ -36,19 +36,23 @@ class PhotoDetailsController extends BaseController {
 		include 'views/PhotoDetailsView.php';
 	}
 
+	//ajax
 	public function likePhotoAction() {
 		protectFromBadRequest($_SESSION, 'current_viewed_photo_id', 'user');
 		$this->model->likePhoto($_SESSION['current_viewed_photo_id'], $_SESSION['user']['id']);
 	}
 
+	//ajax
 	public function removeLikeFromPhotoAction() {
 		protectFromBadRequest($_SESSION, 'current_viewed_photo_id', 'user');
 		$this->model->removeLikeFromPhoto($_SESSION['current_viewed_photo_id'], $_SESSION['user']['id']);
 	}
 
+	//ajax
 	public function commentPhotoAction() {
 		protectFromBadRequest($_SESSION, 'current_viewed_photo_id', 'user');
 		protectFromBadRequest($_POST, 'comment');
 		$this->model->commentPhoto($_SESSION['current_viewed_photo_id'], $_SESSION['user']['id'], $_POST['comment']);
+		$this->model->sendNewCommentEmail($_SESSION['current_viewed_photo_id'], $_SESSION['user']['username'], $_POST['comment']);
 	}
 }

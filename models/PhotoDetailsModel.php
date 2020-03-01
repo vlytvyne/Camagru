@@ -34,4 +34,29 @@ class PhotoDetailsModel extends BaseModel {
 	function commentPhoto($photoId, $userId, $comment) {
 		$this->db->query("INSERT INTO `comments` (`user_id`, `photo_id`, `comment`) VALUES (?, ?, ?)", array($userId, $photoId, $comment));
 	}
+
+	function sendNewCommentEmail($photoId, $commentatorUsername, $comment) {
+		$result = $this->db->query("SELECT receive_emails, email FROM photos INNER JOIN users ON photos.user_id = users.id WHERE photos.id = ?", array($photoId));
+
+		if (count($result) < 1) {
+			return;
+		}
+
+		$wantToReceiveEmail = $result[0]['receive_emails'];
+		$email = $result[0]['email'];
+
+		if (!$wantToReceiveEmail) {
+			return;
+		}
+
+
+		$to      = $email;
+		$subject = 'New comment';
+		$message = "You just got a new comment on your photo in Camagru from $commentatorUsername!\n\n'$comment'";
+		$headers = 'From: camagru@camagru.com' . "\r\n" .
+			'Reply-To: camagru@camagru.com' . "\r\n" .
+			'X-Mailer: PHP/' . phpversion();
+
+		mail($to, $subject, $message, $headers);
+	}
 }

@@ -4,9 +4,7 @@
     <list default="true" id="fc5374b1-645d-4d51-8939-8c17e14d1d9e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/PhotoDetailsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/PhotoDetailsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/PhotoDetailsView.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/PhotoDetailsView.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/css/photo_details.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/css/photo_details.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/js/PhotoDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/js/PhotoDetails.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/PhotoDetailsModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/PhotoDetailsModel.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,9 +199,9 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="385" y="210" key="run.anything.popup/0.0.1440.900@0.0.1440.900" timestamp="1582722389796" />
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1583096002234">
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1583099178108">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1583096002234" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1583099178108" />
   </component>
 </project>
