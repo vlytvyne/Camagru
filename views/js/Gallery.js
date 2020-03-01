@@ -12,15 +12,18 @@ document.addEventListener('DOMContentLoaded', () => {
 	fetchPhotos();
 }, false);
 
-function addPhoto(filename) {
+function addPhotoToDOM(photo) {
 	let div = document.createElement('div');
 	div.classList.add("col-lg-3");
 	div.classList.add("col-md-5");
 	div.classList.add("card");
 	div.classList.add("my_col");
 	let img = document.createElement('img');
-	img.src = `/photos/${filename}`;
+	img.src = `/photos/${photo.filename}`;
 	div.appendChild(img);
+	div.addEventListener('click', () => {
+		window.location.href = `/photoDetails?id=${photo.id}`;
+	});
 	container.appendChild(div);
 }
 
@@ -32,8 +35,9 @@ function fetchPhotos() {
 		} else {
 			page++;
 		}
+		console.log(photos)
 		for (const photoId in response.photos) {
-			addPhoto(photos[photoId].filename);
+			addPhotoToDOM(photos[photoId]);
 		}
 	})
 }

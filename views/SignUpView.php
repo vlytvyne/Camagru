@@ -9,6 +9,7 @@
 		<link rel="stylesheet" type="text/css" href="/views/css/authorization.css"/>
 		<title>Sign Up</title>
 		<script type="text/javascript" src="/views/js/Utils.js"></script>
+		<script type="text/javascript" src="/views/js/SignUpValidation.js"></script>
 		<script>
 
 		</script>

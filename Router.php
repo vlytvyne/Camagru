@@ -7,7 +7,9 @@ define("ROUTES",
 		"resetPassword" => 'PasswordResetController',
 		"photoBooth" => 'PhotoBoothController',
 		"gallery" => 'GalleryController',
-		"profile" => 'ProfileController'
+		"profile" => 'ProfileController',
+		"photoDetails" => 'PhotoDetailsController',
+		"" => 'GalleryController'
 	]);
 
 class Router {
