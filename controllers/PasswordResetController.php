@@ -13,17 +13,20 @@ class PasswordResetController extends BaseController {
 	}
 
 	public function indexAction() {
+		protectFromAuthorizedUser();
 		include 'views/PasswordResetView.php';
 	}
 
 	public function emailSentAction() {
 		protectFromBadRequest($_POST, 'email');
+		protectFromAuthorizedUser();
 		$this->model->sendPasswordResetEmail($_POST['email']);
 		include 'views/PasswordResetEmailSentView.php';
 	}
 
 	public function enterNewPasswordAction() {
 		protectFromBadRequest($_GET, 'email', 'secret');
+		protectFromAuthorizedUser();
 		if (!$this->model->isSecretValid($_GET['email'], $_GET['secret'])) {
 			http_response_code(400);
 			die();
@@ -36,6 +39,7 @@ class PasswordResetController extends BaseController {
 	public function setNewPasswordAction() {
 		protectFromBadRequest($_SESSION, 'resetPasswordEmail', 'resetPasswordSecret');
 		protectFromBadRequest($_POST['password']);
+		protectFromAuthorizedUser();
 		if (!$this->model->isSecretValid($_SESSION['resetPasswordEmail'], $_SESSION['resetPasswordSecret'])) {
 			http_response_code(400);
 			die();

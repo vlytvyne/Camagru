@@ -13,6 +13,7 @@ class LogInController extends BaseController {
 	}
 
 	public function indexAction() {
+		protectFromAuthorizedUser();
 		include 'views/LogInView.php';
 	}
 

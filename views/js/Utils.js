@@ -15,6 +15,10 @@ function isEmailValid(email) {
         alert("Email is invalid");
         return false
     }
+    if (email.length > 60) {
+        alert("Email is too long. Max 60 characters");
+        return false
+    }
 
     return true;
 }
@@ -27,6 +31,10 @@ function isUsernameValid(username) {
     }
     if (username.length < 6) {
         alert("Username is too short. At least 6 characters");
+        return false
+    }
+    if (username.length > 60) {
+        alert("Username is too long. Max 60 characters");
         return false
     }
 
@@ -42,6 +50,11 @@ function isPasswordValid(password) {
         alert("Password is too short. At least 6 characters");
         return false
     }
+    if (password.length > 20) {
+        alert("Password is too long. Max 20 characters");
+        return false
+    }
+
     return true
 }
 

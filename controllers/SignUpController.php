@@ -13,11 +13,13 @@ class SignUpController extends BaseController {
 	}
 
 	public function indexAction() {
+		protectFromAuthorizedUser();
 		include 'views/SignUpView.php';
 	}
 
 	public function confirmationAction() {
 		protectFromBadRequest($_POST, 'email', 'username', 'password');
+		protectFromAuthorizedUser();
 		$this->model->createNewUser($_POST['username'], $_POST['email'], $_POST['password']);
 		$this->model->sendConfirmationEmail($_POST['email']);
 		include 'views/EmailConfirmationView.php';
@@ -25,6 +27,7 @@ class SignUpController extends BaseController {
 
 	public function activationAction() {
 		protectFromBadRequest($_GET, 'email', 'secret');
+		protectFromAuthorizedUser();
 		$resultCode = $this->model->activateAccount($_GET['email'], $_GET['secret']);
 		$activationResult = $this->getActivationResult($resultCode);
 		include 'views/AccountActivationView.php';

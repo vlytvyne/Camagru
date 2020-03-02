@@ -15,12 +15,14 @@ class PhotoBoothController extends BaseController {
 	}
 
 	public function indexAction() {
+		protectFromUnauthorizedUser();
 		include 'views/PhotoBoothView.php';
 	}
 
 	//ajax
 	public function publishPhotoAction() {
 		protectFromBadRequest($_POST, 'photoBase64');
+		protectFromUnauthorizedUser();
 		$result = $this->model->savePhoto($_POST['photoBase64']);
 		if ($result !== false) {
 			$this->model->addPhotoToDb($result, $_SESSION['user']['id']);
