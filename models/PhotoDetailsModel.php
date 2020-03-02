@@ -59,4 +59,11 @@ class PhotoDetailsModel extends BaseModel {
 
 		mail($to, $subject, $message, $headers);
 	}
+
+	function deletePhoto($photoId, $photoFilename) {
+		$this->db->query("DELETE FROM photos WHERE id = ?", array($photoId));
+		$this->db->query("DELETE FROM likes WHERE photo_id = ?", array($photoId));
+		$this->db->query("DELETE FROM comments WHERE photo_id = ?", array($photoId));
+		unlink("photos/$photoFilename");
+	}
 }

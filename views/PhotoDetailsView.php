@@ -30,6 +30,12 @@
 			<?php endif; ?>
 		</div>
 
+		<?php if (isset($_SESSION['user']) && $_SESSION['user']['username'] == $owner_username): ?>
+		<div class="d-flex justify-content-end">
+			<button class="btn btn-danger align-self-end" id="btn_delete">Delete photo</button>
+		</div>
+		<?php endif; ?>
+
 		<?php if (isset($_SESSION['user'])): ?>
 			<h1>Comments</h1>
 

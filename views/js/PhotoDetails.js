@@ -1,6 +1,7 @@
 let btnLike;
 let btnRemoveLike;
 let btnPublishComment;
+let btnDelete;
 let inputComment;
 let textLikesAmount;
 
@@ -10,10 +11,12 @@ document.addEventListener('DOMContentLoaded', () => {
 	btnPublishComment = document.getElementById('publish_btn');
 	inputComment = document.getElementById('input_comment');
 	textLikesAmount = document.getElementById('likes_amount');
+	btnDelete = document.getElementById('btn_delete');
 
 	btnLike.addEventListener('click', onLikeClick)
 	btnRemoveLike.addEventListener('click', onRemoveLikeClick)
 	btnPublishComment.addEventListener('click', onPublishCommentClick)
+	btnDelete.addEventListener('click', onDeleteClick)
 }, false);
 
 function onLikeClick() {
@@ -49,4 +52,9 @@ function onPublishCommentClick() {
 	ajax('/photoDetails/commentPhoto', `comment=${comment}`, () => {
 		window.location.reload()
 	})
+}
+
+function onDeleteClick() {
+	ajax('/photoDetails/deletePhoto', "", () => {})
+	window.location.replace('gallery')
 }
