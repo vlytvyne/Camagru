@@ -13,10 +13,14 @@ document.addEventListener('DOMContentLoaded', () => {
 	textLikesAmount = document.getElementById('likes_amount');
 	btnDelete = document.getElementById('btn_delete');
 
-	btnLike.addEventListener('click', onLikeClick)
-	btnRemoveLike.addEventListener('click', onRemoveLikeClick)
-	btnPublishComment.addEventListener('click', onPublishCommentClick)
-	btnDelete.addEventListener('click', onDeleteClick)
+	try {
+		btnLike.addEventListener('click', onLikeClick)
+		btnRemoveLike.addEventListener('click', onRemoveLikeClick)
+		btnPublishComment.addEventListener('click', onPublishCommentClick)
+		btnDelete.addEventListener('click', onDeleteClick)
+	} catch (e) {
+
+	}
 }, false);
 
 function onLikeClick() {

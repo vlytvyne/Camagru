@@ -1,6 +1,7 @@
 <?php
 
 include_once 'BaseModel.php';
+include_once $_SERVER['DOCUMENT_ROOT'].'/Utils.php';
 
 const SECRET = 'VadymBogVsesvitu';
 
@@ -11,22 +12,19 @@ const RC_SUCCESS = 2;
 class SignUpModel extends BaseModel {
 
 	public function createNewUser($username, $email, $password) {
-		$this->db->query("INSERT INTO users VALUES (?, ?, ?, false)",
+		$this->db->query("INSERT INTO users (`username`, `email`, `password`, `activated`, `receive_emails`, `id`) VALUES (?, ?, ?, '0', '1', NULL)",
 			array($username, $email, hash('sha256', $password)));
 	}
 
 	public function sendConfirmationEmail($email) {
+		$title = 'Sign up confirmation';
+
 		$secret = $this->generateSecret($email);
-		$confirmationLink = "http://localhost:80/signUp/activation?email=$email&secret=$secret";
+		$port = $_SERVER['SERVER_PORT'];
+		$confirmationLink = "http://localhost:$port/signUp/activation?email=$email&secret=$secret";
+		$message = "To confirm account creation please click the following link:\r\n\r\n$confirmationLink";
 
-		$to      = $email;
-		$subject = 'Camagru account creation';
-		$message = "To confirm account creation please click the following link:\n\n$confirmationLink";
-		$headers = 'From: camagru@camagru.com' . "\r\n" .
-			'Reply-To: camagru@camagru.com' . "\r\n" .
-			'X-Mailer: PHP/' . phpversion();
-
-		mail($to, $subject, $message, $headers);
+		sendMail($email, $title, $message);
 	}
 
 	public function activateAccount($email, $secret) {

@@ -68,7 +68,7 @@ function ajax(relativeUrl, params, onLoaded) {
 }
 
 function getHostname() {
-    return 'http://' + window.location.hostname;
+    return 'http://' + window.location.hostname + ':' + location.port;
 }
 
 function disableBtn(btn) {

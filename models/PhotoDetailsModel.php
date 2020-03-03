@@ -1,6 +1,7 @@
 <?php
 
 include_once 'BaseModel.php';
+include_once $_SERVER['DOCUMENT_ROOT'].'/Utils.php';
 
 class PhotoDetailsModel extends BaseModel {
 
@@ -49,15 +50,10 @@ class PhotoDetailsModel extends BaseModel {
 			return;
 		}
 
+		$title = 'New comment';
+		$message = "You just got a new comment on your photo in Camagru from $commentatorUsername:\r\n\r\n'$comment'";
 
-		$to      = $email;
-		$subject = 'New comment';
-		$message = "You just got a new comment on your photo in Camagru from $commentatorUsername!\n\n'$comment'";
-		$headers = 'From: camagru@camagru.com' . "\r\n" .
-			'Reply-To: camagru@camagru.com' . "\r\n" .
-			'X-Mailer: PHP/' . phpversion();
-
-		mail($to, $subject, $message, $headers);
+		sendMail($email, $title, $message);
 	}
 
 	function deletePhoto($photoId, $photoFilename) {

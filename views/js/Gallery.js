@@ -35,7 +35,6 @@ function fetchPhotos() {
 		} else {
 			page++;
 		}
-		console.log(photos)
 		for (const photoId in response.photos) {
 			addPhotoToDOM(photos[photoId]);
 		}

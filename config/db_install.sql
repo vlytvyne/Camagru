@@ -20,27 +20,12 @@ SET time_zone = "+00:00";
 -- Table structure for table `comments`
 --
 
+
 CREATE TABLE `comments` (
   `user_id` int(11) NOT NULL,
   `photo_id` int(11) NOT NULL,
   `comment` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `comments`
---
-
-INSERT INTO `comments` (`user_id`, `photo_id`, `comment`) VALUES
-(2, 12, 'New Comment'),
-(2, 12, 'Cool'),
-(2, 12, 'KKK'),
-(2, 12, 'adsad'),
-(2, 12, 'dsad'),
-(2, 13, 'Great dog!!!'),
-(2, 13, 'ad'),
-(2, 13, 'adwdq'),
-(2, 13, 'New comment');
-
 -- --------------------------------------------------------
 
 --
@@ -51,16 +36,6 @@ CREATE TABLE `likes` (
   `user_id` int(11) NOT NULL,
   `photo_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `likes`
---
-
-INSERT INTO `likes` (`user_id`, `photo_id`) VALUES
-(1, 13),
-(2, 11),
-(1, 8),
-(1, 4);
 
 -- --------------------------------------------------------
 
@@ -89,11 +64,7 @@ INSERT INTO `photos` (`id`, `filename`, `creation_timestamp`, `user_likes`, `com
 (6, 'photo_6.jpeg', '2020-02-28 17:18:06', '', '', 1),
 (7, 'photo_7.jpg', '2020-02-28 17:18:47', '', '', 1),
 (8, 'photo_8.jpg', '2020-02-28 17:18:47', '', '', 2),
-(9, 'photo_4.jpeg', '2020-02-28 17:17:19', '', '', 1),
-(10, '5e593a61b4a85.png', '2020-02-28 18:05:53', '', '', 1),
-(11, '5e5951b96adc5.png', '2020-02-28 19:45:29', '', '', 1),
-(12, '5e5990dd18833.png', '2020-02-29 00:14:53', '', '', 1),
-(13, '5e59935f2911d.png', '2020-02-29 00:25:35', '', '', 1);
+(9, 'photo_4.jpeg', '2020-02-28 17:17:19', '', '', 1);
 
 -- --------------------------------------------------------
 

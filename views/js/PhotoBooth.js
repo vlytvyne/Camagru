@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
     fileInput.onerror = () => { console.error("File input error")};
     canvas.addEventListener('mousedown', onCanvasClick);
     setupOnStickerClickListener();
-    
+
     startWebcamTranslation();
 }, false);
 
@@ -38,7 +38,7 @@ function startWebcamTranslation() {
         .then(stream => {
             video.srcObject = stream;
             video.play()
-        })
+        }, () => { alert('Camera access is denied. Some functions may don\'t work properly.')})
 }
 
 function translateWebcamToCanvas() {
